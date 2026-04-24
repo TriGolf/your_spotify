@@ -18,6 +18,7 @@ const validators = {
   MONGO_NO_ADMIN_RIGHTS: z.preprocess(toBoolean, z.boolean().optional()),
   PROMETHEUS_USERNAME: z.string().optional(),
   PROMETHEUS_PASSWORD: z.string().optional(),
+  REFRESH_WAIT: z.preprocess(toNumber, z.number().optional()),
 } as const;
 
 const validatedEnv: Record<string, any> = {};

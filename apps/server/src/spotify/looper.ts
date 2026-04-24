@@ -8,6 +8,7 @@ import { retryPromise, wait } from "../tools/misc";
 import { SpotifyAPI } from "../tools/apis/spotifyApi";
 import { Infos } from "../database/schemas/info";
 import { getTracksAlbumsArtists, storeIterationOfLoop } from "./dbTools";
+import { getWithDefault } from "../tools/env";
 
 const RETRY = 10;
 
@@ -95,7 +96,7 @@ const loop = async (user: User) => {
   );
 };
 
-const WAIT_MS = 120 * 1000;
+const WAIT_MS = getWithDefault("REFRESH_WAIT", 120*1000);
 
 export const dbLoop = async () => {
   // return;
