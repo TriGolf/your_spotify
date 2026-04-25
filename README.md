@@ -100,7 +100,7 @@ You can follow the instructions [here](https://github.com/Yooooomi/your_spotify/
 | MONGO_NO_ADMIN_RIGHTS | false | Do not ask for admin right on the Mongo database |
 | PORT                  | 8080 | The port of the server, **do not** modify if you're using docker |
 | FRAME_ANCESTORS       | _not defined_ | Sites allowed to frame the website, comma separated list of URLs (`i-want-a-security-vulnerability-and-want-to-allow-all-frame-ancestors` to allow every website) |
-| REFRESH_WAIT          | 120000 | Time (in ms) between the refresh of the users history (higher value means less calls to spotify's api but the songs you listen may take longer to appear on the history) |
+| REFRESH_WAIT          | 120000 (corresponds to 2 minutes) | Time (in ms) between the refresh of the users history (higher value means less calls to spotify's api but the songs you listen may take longer to appear on the history) |
 
 ## Advanced CORS settings
 
